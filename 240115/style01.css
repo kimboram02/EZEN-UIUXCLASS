@@ -1,0 +1,45 @@
+/* #header h1 {
+  color: #f00;
+}
+#section h1 {
+  color: #00f;
+} */
+/* table > tbody > tr > th {
+  color: #f00;
+} */
+/* h1 + h2 {
+  color: #fff;
+}
+h2:nth-child(3) {
+  color: #fff;
+}
+/* h2:nth-child(4) {
+  color: #fff;
+} */
+h2:nth-of-type(3) {
+  color: #fff;
+}
+h1 ~ h2 {
+  background: crimson;
+} */
+/* h1:hover {
+  color: #f00;
+}
+h1:active {
+  color: #00f;
+} */
+/* input:disabled {
+  background: orange;
+}
+input:enabled {
+  background: #0f0;
+} */
+/* input [type="checkbox"]:checked + div {
+  height: 0px;
+}
+div {
+  overflow:hidden;
+  width: 650px;
+  height: 300px;
+  transition-duration: 1s;
+} */
