@@ -1,0 +1,29 @@
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 70px;
+  background: #ff6a00;
+  border: 10px solid #fff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 5px #000;
+  text-align: center;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: bold;
+  font-style: italic;
+}
+/* a {
+  display: block;
+  color: inherit;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: bold;
+  font-style: italic;
+} */
