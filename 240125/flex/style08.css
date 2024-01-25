@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#container {
+  height: 100vh;
+  display: flex;
+}
+nav {
+  background: red;
+  flex: 1;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+}
+header {
+  height: 150px;
+  background: yellow;
+}
+#main {
+  display: flex;
+  flex-direction: row;
+}
+#middle {
+  flex: 4;
+}
+article {
+  background: green;
+  height: calc(100vh - 300px);
+}
+footer {
+  background: blue;
+  height: 150px;
+}
+aside {
+  flex: 1;
+  background: orange;
+}
