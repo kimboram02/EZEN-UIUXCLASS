@@ -1,0 +1,133 @@
+@import url("./reset.css");
+
+/*====mobile====*/
+header {
+  width: 100%;
+  position: fixed;
+}
+.inner {
+  width: 100%;
+  height: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid #123e8c;
+  background: #fff;
+  border-radius: 40px;
+  padding: 40px;
+}
+.inner h1 {
+  font-size: 50px;
+}
+.inner .gnb {
+  display: none;
+  position: absolute;
+  width: 200px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  padding: 80px 40px 0 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: right;
+  background: #fff;
+  z-index: 2;
+}
+.inner .gnb ul li {
+  padding: 20px 0;
+}
+.inner .gnb ul li a {
+  font-size: 20px;
+}
+.inner .gnb ul li a:hover {
+  font-weight: bold;
+  color: #123e8c;
+}
+.inner .gnb.active {
+  display: block;
+}
+.inner .toggle_btn {
+  position: relative;
+  width: 34px;
+  height: 27px;
+  cursor: pointer;
+  z-index: 3;
+}
+.inner .toggle_btn span {
+  position: absolute;
+  width: 34px;
+  height: 4px;
+  background: #000;
+}
+.inner .toggle_btn span:nth-child(2) {
+  top: 50%;
+}
+.inner .toggle_btn span:nth-child(3) {
+  top: 100%;
+}
+figure h1 {
+  height: 350px;
+  font-size: 80px;
+  padding-top: 140px;
+}
+figure .slider {
+  width: 100%;
+  height: calc(100vh - 140px);
+  background: url("./img/img1.png") center/cover no-repeat;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+figure .slider:active {
+  background: url("./img/img2.jpg") center/cover no-repeat;
+}
+
+/*====tablet====*/
+@media screen and (min-width: 768px) {
+  .inner {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .inner .gnb {
+    display: block;
+    position: static;
+    box-shadow: none;
+    width: auto;
+    height: auto; /*gnb 안 글자만큼만 height auto => 위에서 속성값을 수정해줘야 함*/
+    background: none;
+    padding: 0;
+  }
+  .inner .gnb ul {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+  }
+  .inner .gnb ul li {
+    padding: 0;
+  }
+  .inner .toggle_btn {
+    display: none;
+  }
+  figure {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 85px;
+  }
+  figure h1 {
+    width: 40%;
+    height: 100%;
+    font-size: 100px;
+    float: left;
+    display: flex;
+    justify-content: center;
+  }
+  figure .slider {
+    width: 60%;
+    height: 100vh;
+    float: right;
+  }
+}
+@media screen and (min-width: 1132px) {
+  figure h1 {
+    font-size: 120px;
+  }
+}
