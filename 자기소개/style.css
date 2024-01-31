@@ -3,9 +3,12 @@
 /*====mobile====*/
 header {
   width: 100%;
+  height: 57px;
   position: fixed;
+  display: flex;
+  align-items: center;
 }
-.inner {
+header .inner {
   width: 100%;
   height: 0px;
   display: flex;
@@ -15,12 +18,12 @@ header {
   border: 3px solid #123e8c;
   background: #fff;
   border-radius: 40px;
-  padding: 40px;
+  padding: 25px;
 }
-.inner h1 {
-  font-size: 50px;
+header .inner h1 {
+  font-size: 35px;
 }
-.inner .gnb {
+header .inner .gnb {
   display: none;
   position: absolute;
   width: 200px;
@@ -33,61 +36,105 @@ header {
   background: #fff;
   z-index: 2;
 }
-.inner .gnb ul li {
+header .inner .gnb ul li {
   padding: 20px 0;
 }
-.inner .gnb ul li a {
+header .inner .gnb ul li a {
   font-size: 20px;
 }
-.inner .gnb ul li a:hover {
+header .inner .gnb ul li a:hover {
   font-weight: bold;
   color: #123e8c;
 }
-.inner .gnb.active {
+header .inner .gnb.active {
   display: block;
 }
-.inner .toggle_btn {
+header .inner .toggle_btn {
   position: relative;
-  width: 34px;
-  height: 27px;
+  width: 25px;
+  height: 18px;
   cursor: pointer;
   z-index: 3;
 }
-.inner .toggle_btn span {
+header .inner .toggle_btn span {
   position: absolute;
-  width: 34px;
-  height: 4px;
+  width: 25px;
+  height: 3px;
   background: #000;
 }
-.inner .toggle_btn span:nth-child(2) {
+header .inner .toggle_btn span:nth-child(2) {
   top: 50%;
 }
-.inner .toggle_btn span:nth-child(3) {
+header .inner .toggle_btn span:nth-child(3) {
   top: 100%;
 }
 figure h1 {
   height: 350px;
   font-size: 80px;
   padding-top: 140px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 figure .slider {
   width: 100%;
-  height: calc(100vh - 140px);
+  height: calc(100vh - 350px);
   background: url("./img/img1.png") center/cover no-repeat;
   border-radius: 20px 20px 0 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 figure .slider:active {
   background: url("./img/img2.jpg") center/cover no-repeat;
 }
+section {
+  width: 100%;
+  height: 100vh;
+}
+section .contents {
+  width: 100%;
+  height: 100%;
+  padding: 80px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+section .contents .content-title {
+  font-size: 30px;
+}
+section .contents .content {
+  width: 500px;
+  height: 200px;
+}
+section .contents .content .pic {
+  width: 60%;
+  height: 200px;
+  float: left;
+  overflow: hidden;
+}
+section .contents .content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  opacity: 0.9;
+}
+section .contents .content img:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+section .contents .content .detail {
+  float: left;
+  margin-left: 20px;
+}
+section .contents .content .detail p {
+  color: #123e8c;
+  margin-top: 5px;
+}
 
 /*====tablet====*/
 @media screen and (min-width: 768px) {
-  .inner {
+  header .inner {
     width: 80%;
     margin: 0 auto;
   }
-  .inner .gnb {
+  header .inner .gnb {
     display: block;
     position: static;
     box-shadow: none;
@@ -96,21 +143,20 @@ figure .slider:active {
     background: none;
     padding: 0;
   }
-  .inner .gnb ul {
+  header .inner .gnb ul {
     display: flex;
     flex-direction: row;
     gap: 60px;
   }
-  .inner .gnb ul li {
+  header .inner .gnb ul li {
     padding: 0;
   }
-  .inner .toggle_btn {
+  header .inner .toggle_btn {
     display: none;
   }
   figure {
     width: 100%;
     overflow: hidden;
-    padding-top: 85px;
   }
   figure h1 {
     width: 40%;
@@ -124,10 +170,18 @@ figure .slider:active {
     width: 60%;
     height: 100vh;
     float: right;
+    margin-top: 120px;
+  }
+  section .contents {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 @media screen and (min-width: 1132px) {
   figure h1 {
-    font-size: 120px;
+    font-size: 140px;
   }
 }

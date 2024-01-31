@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+// body {
+//   height: 100vh;
+//   background: #000;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .btn-outer {
+//   width: 300px;
+//   border: 1px solid #fff;
+//   height: 50px;
+//   border: 1px solid #fff;
+//   .btn {
+//     display: block;
+//     text-transform: uppercase;
+//     text-align: center;
+//     line-height: 50px;
+//     &:hover{
+//       color: crimson; /*부모요소에서 부모선택자 불러올 때: &*/
+//     }
+//   }
+// }
+/*variable 변수*/
+// $primary: royalblue;
+// $confirm: yellowgreen;
+// $danger: crimson;
+// $btn-padding: 10px 30px;
+
+// .btns {
+//   text-align: center;
+//   .btn {
+//     border: none;
+//     padding: $btn-padding;
+//     border-radius: 5px;
+//     text-transform: uppercase;
+//     color: #fff;
+//   }
+//   .primary{
+//     background: $primary;
+//   }
+//   .secondary{
+//     background: $confirm;
+
+//   }
+//   .accent{
+//     background: $danger;
+//   }
+//   .optional{
+//     background: $primary;
+//   }
+// }
+.heading {
+  text-align: center;
+  position: relative;
+  padding-bottom: 12px;
+  span {
+    color: royalblue;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100px;
+    height: 4px;
+    background-color: crimson;
+  }
+}

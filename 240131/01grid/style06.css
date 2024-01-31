@@ -1,0 +1,16 @@
+.parent {
+  background: khaki;
+  border: 5px solid #000;
+  display: grid;
+  grid-template-areas: ". . . item item" ". . . item item"; /*온점 말고도 다른 문자 사용가능하나 온점 사용하라*/
+}
+.parent div {
+  padding: 10px;
+  text-align: center; /*order값 준 애들 가운데서 순번=>그래서 order 안 준 애들 뒤로 감*/
+  font-size: 30px;
+  border: 1px solid #000;
+}
+.item {
+  background: crimson;
+  grid-area: item;
+}
