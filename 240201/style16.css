@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/*variables*/
+/*변수 안에 속성*/
+body {
+  background: #dfe6e9;
+}
+
+.frame h1 {
+  color: #d63031;
+  font-size: 45px;
+}
+.frame p {
+  font-size: 32px;
+}/*# sourceMappingURL=style16.css.map */

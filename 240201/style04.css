@@ -1,0 +1,10 @@
+@charset "UTF-8";
+.frame {
+  border: 1px solid #000;
+  padding: 20px;
+  text-align: center;
+}
+.heading {
+  color: crimson; /* 부모 요소 안에 없지만 동일한 클래스를 가지고 있는 밖 애들한테도 효과 줌: @at-root */
+  font-size: 36px;
+}/*# sourceMappingURL=style04.css.map */

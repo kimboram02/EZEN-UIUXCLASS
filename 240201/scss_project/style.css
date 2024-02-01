@@ -1,0 +1,53 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+.heart-beat {
+  box-shadow: 0 -10px 100px rgb(255, 165, 0), 0 -10px 150px rgb(255, 165, 0), 0 -10px 200px rgb(255, 165, 0); /*그림자겹겹히*/
+  width: 100px;
+  height: 100px;
+  background: orange;
+  transform: rotate(45deg);
+  position: relative;
+  animation: heart 0.5s linear infinite;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+.heart-beat::after, .heart-beat::before {
+  position: absolute;
+  content: "";
+  width: inherit;
+  height: inherit;
+  background: inherit;
+  border-radius: 50%;
+}
+.heart-beat::after {
+  top: -50%;
+  left: 0;
+}
+.heart-beat::before {
+  top: 0;
+  left: -50%;
+}
+@keyframes heart {
+  0% {
+    transform: rotate(45deg) scale(1); /*앞에서 작성된 rotate 다시 적용*/
+  }
+  50% {
+    transform: rotate(45deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(45deg) scale(0.95);
+  }
+}/*# sourceMappingURL=style.css.map */

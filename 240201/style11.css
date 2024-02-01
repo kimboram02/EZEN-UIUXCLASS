@@ -1,0 +1,41 @@
+.heading {
+  font-size: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 20px;
+}
+.heading span {
+  color: royalblue;
+}
+.heading::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: crimson;
+}
+
+.new-headline {
+  font-size: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 20px;
+}
+.new-headline span {
+  color: royalblue;
+}
+.new-headline::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: crimson;
+}/*# sourceMappingURL=style11.css.map */

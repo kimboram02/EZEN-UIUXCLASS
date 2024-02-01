@@ -1,0 +1,33 @@
+@charset "UTF-8";
+@import url("./style08.scss");
+/*전역변수와 지역변수 차이 아래는 지역변수 예제*/
+/*
+.portfolio {
+  $crimson: crimson;
+  $block: #000;
+  color: $crimson;
+  h1 {
+    color: $block;
+  }
+}
+
+.headline {
+  color: $crimson;
+  h1 {
+    color: $block;
+  }
+}*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}/*# sourceMappingURL=style08_1.css.map */
