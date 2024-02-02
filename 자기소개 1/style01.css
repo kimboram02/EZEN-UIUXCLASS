@@ -1,0 +1,289 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*====mobile====*/
+body {
+  font-family: "Lato", sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  z-index: 1;
+}
+header #inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  background: #fff;
+  border-radius: 25px;
+  padding: 0 25px;
+}
+header #inner .logo {
+  font-size: 20px;
+}
+header #inner .toggle_btn {
+  position: relative;
+  width: 20px;
+  height: 14px;
+  cursor: pointer;
+  z-index: 3;
+}
+header #inner .toggle_btn span {
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background: #000;
+}
+header #inner .toggle_btn span:nth-child(2) {
+  top: 50%;
+}
+header #inner .toggle_btn span:nth-child(3) {
+  top: 100%;
+}
+header #inner .gnb {
+  display: none;
+  font-weight: bold;
+  position: absolute;
+  width: 200px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  padding: 80px 25px 0 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, 0.2);
+  text-align: right;
+  background: #123e8c;
+  z-index: 2;
+}
+header #inner .gnb li {
+  padding: 30px 0;
+}
+header #inner .gnb li a {
+  font-size: 20px;
+  color: #fff;
+}
+header #inner .gnb li a:hover {
+  font-weight: bold;
+  color: #ffed00;
+}
+header #inner .gnb.active {
+  display: block;
+}
+
+figure h1 {
+  height: 350px;
+  font-size: 80px;
+  padding-top: 140px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+figure h1 span:nth-child(1) {
+  display: block;
+}
+figure h1 span:nth-child(2) {
+  display: inline-block;
+  margin-top: 20px;
+}
+figure .slider {
+  width: 100%;
+  height: calc(100vh - 350px);
+  background: url("./img/img1.png") center/cover no-repeat;
+  border-radius: 20px 20px 0 0;
+  animation: poo 10s linear infinite;
+  transition: all 0.5s;
+}
+@keyframes poo {
+  0% {
+    background: url("./img/img1.png") center/cover no-repeat;
+  }
+  40% {
+    background: url("./img/img1.png") center/cover no-repeat;
+  }
+  80% {
+    background: url("./img/img2.jpg") center/cover no-repeat;
+  }
+  100% {
+    background: url("./img/img2.jpg") center/cover no-repeat;
+  }
+}
+
+#hobby-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#hobby-section .inner {
+  width: 95%;
+  height: 100%;
+}
+#hobby-section .inner .sec-tit {
+  padding: 80px 0 30px;
+  height: 20%;
+  font-size: 40px;
+  font-weight: normal;
+  color: #123e8c;
+  text-align: center;
+}
+#hobby-section .inner .wrap {
+  border: 1px solid #f00;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#hobby-section .inner .wrap .hobby {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+#hobby-section .inner .wrap .hobby-img {
+  width: 60%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+#hobby-section .inner .wrap .hobby-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  transition: all 0.3s linear;
+  opacity: 0.9;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+#hobby-section .inner .wrap .hobby-img img:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+#hobby-section .inner .wrap .hobby-info {
+  width: 40%;
+  margin-left: 20px;
+}
+#hobby-section .inner .wrap .hobby-info h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+#hobby-section .inner .wrap .hobby-info p {
+  color: #123e8c;
+  font-size: 15px;
+}
+
+/*====tablet====*/
+@media screen and (min-width: 768px) {
+  header #inner {
+    width: 80%;
+    margin: 0 auto;
+  }
+  header #inner .toggle_btn {
+    display: none;
+  }
+  header #inner .gnb {
+    display: block;
+    position: static;
+    box-shadow: none;
+    width: auto;
+    height: auto; /*gnb 안 글자만큼만 height auto => 위에서 속성값을 수정해줘야 함*/
+    background: none;
+    padding: 0;
+  }
+  header #inner .gnb ul {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+  }
+  header #inner .gnb ul li {
+    padding: 0;
+  }
+  header #inner .gnb ul li a {
+    color: #000;
+    font-size: 15px;
+  }
+  header #inner .gnb ul li a:hover {
+    color: #ffed00;
+  }
+  figure {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  figure h1 {
+    width: 40%;
+    height: 100%;
+    font-size: 100px;
+    padding-left: 10%;
+  }
+  figure h1 span:nth-child(2) {
+    display: block;
+    margin: 30px 0;
+  }
+  figure .slider {
+    width: 60%;
+    height: 100vh;
+    margin-top: 120px;
+  }
+  #hobby-section .inner {
+    width: 80%;
+  }
+  #hobby-section .inner .wrap {
+    flex-direction: row;
+    border: 1px solid #f00;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  #hobby-section .inner .wrap .hobby {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #hobby-section .inner .wrap .hobby-img {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  #hobby-section .inner .wrap .hobby-img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 20px;
+    transition: all 0.3s linear;
+    opacity: 0.9;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+  }
+  #hobby-section .inner .wrap .hobby-img img:hover {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1132px) {
+  figure h1 {
+    font-size: 140px;
+  }
+}/*# sourceMappingURL=style01.css.map */
