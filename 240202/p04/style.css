@@ -118,14 +118,17 @@ body {
 .featherlight .featherlight-content {
   width: 100%;
   height: 100%;
+  margin: 0 !important;
+  max-height: 100%;
 }
 
 .featherlight .featherlight-content .featherlight-inner {
+  padding: 0 25%;
   width: 100%;
   height: 100%;
 }
 
-.featherlight .featherlight-close-icon {
+.featherlight .featherlight-content .featherlight-close-icon {
   position: absolute;
   top: 90%;
   left: 30px;
