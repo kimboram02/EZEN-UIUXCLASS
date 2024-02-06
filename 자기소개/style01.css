@@ -1,0 +1,401 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*====mobile====*/
+body {
+  font-family: "Lato", sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  z-index: 1;
+  background: #fff;
+  border-bottom: 1px solid #000;
+}
+header #inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+}
+header #inner .logo {
+  font-size: 20px;
+}
+header #inner .toggle_btn {
+  position: relative;
+  width: 20px;
+  height: 14px;
+  cursor: pointer;
+  z-index: 3;
+}
+header #inner .toggle_btn span {
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background: #000;
+}
+header #inner .toggle_btn span:nth-child(2) {
+  top: 50%;
+}
+header #inner .toggle_btn span:nth-child(3) {
+  top: 100%;
+}
+header #inner .toggle_btn.active span {
+  background: #fff;
+}
+header #inner .toggle_btn.active span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+header #inner .toggle_btn.active span:nth-child(2) {
+  opacity: 0;
+}
+header #inner .toggle_btn.active span:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+header #inner .gnb {
+  display: none;
+  font-weight: bold;
+  position: absolute;
+  width: 200px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  padding: 80px 25px 0 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: right;
+  background: #111;
+  z-index: 2;
+}
+header #inner .gnb li {
+  padding: 30px 0;
+}
+header #inner .gnb li a {
+  font-size: 20px;
+  color: #fff;
+}
+header #inner .gnb li a:hover {
+  font-weight: bold;
+  color: #ddd;
+}
+header #inner .gnb.active {
+  display: block;
+}
+
+figure h1 {
+  height: 350px;
+  font-size: 80px;
+  padding-top: 140px;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+figure h1 span:nth-child(1) {
+  display: block;
+}
+figure h1 span:nth-child(2) {
+  display: inline-block;
+  margin-top: 20px;
+}
+figure .slider {
+  width: 100%;
+  height: calc(100vh - 350px);
+  background: url("./img/main-img.jpg") center/cover no-repeat;
+}
+
+#hobby-section {
+  width: 100%;
+  height: 100%;
+}
+#hobby-section .inner {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+}
+#hobby-section .inner .sec-tit {
+  padding: 120px 0 60px;
+  font-size: 40px;
+  font-weight: bold;
+}
+#hobby-section .inner .wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+}
+#hobby-section .inner .wrap .hobby {
+  width: 100%;
+  display: flex;
+}
+#hobby-section .inner .wrap .hobby-img {
+  width: 60%;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+#hobby-section .inner .wrap .hobby-img::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0;
+}
+#hobby-section .inner .wrap .hobby-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+#hobby-section .inner .wrap .hobby-img:hover::before {
+  opacity: 0.8;
+}
+#hobby-section .inner .wrap .hobby-img:hover h3 {
+  opacity: 1;
+}
+#hobby-section .inner .wrap .hobby-img h3 {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 5px;
+  font-weight: normal;
+  opacity: 0;
+}
+#hobby-section .inner .wrap .hobby-info {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: end;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#mbti-section {
+  width: 100%;
+  height: 100%;
+  background: #eee;
+}
+#mbti-section .inner {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+#mbti-section .inner .sec-tit {
+  padding: 120px 0 60px;
+  font-size: 40px;
+  font-weight: bold;
+}
+#mbti-section .inner .sec-main {
+  position: absolute;
+  left: 0;
+  bottom: 80px;
+  animation: mbti 10s linear infinite;
+}
+#mbti-section .inner .sec-main h1 {
+  width: 400px;
+  height: 300px;
+  line-height: 300px;
+  font-size: 120px;
+  text-align: center;
+  margin-bottom: 150px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+}
+#mbti-section .inner .sec-main img {
+  padding-left: 150px;
+}
+@keyframes mbti {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    left: 90%;
+    opacity: 0;
+  }
+}
+#mbti-section .inner .flower {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  right: 0;
+  top: 80px; /*위치추후조정*/
+  animation: flower 3s linear infinite;
+}
+#mbti-section .inner .flower span {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 100%;
+}
+#mbti-section .inner .flower span:nth-child(1) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: yellow;
+  z-index: 2;
+}
+#mbti-section .inner .flower span:nth-child(2) {
+  top: 16%;
+  left: 16%;
+  background: #fff;
+}
+#mbti-section .inner .flower span:nth-child(3) {
+  top: 16%;
+  right: 16%;
+  background: #fff;
+}
+#mbti-section .inner .flower span:nth-child(4) {
+  bottom: 16%;
+  right: 16%;
+  background: #fff;
+}
+#mbti-section .inner .flower span:nth-child(5) {
+  bottom: 16%;
+  left: 16%;
+  background: #fff;
+}
+@keyframes flower {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*====tablet====*/
+@media screen and (min-width: 768px) {
+  header #inner {
+    width: 80%;
+    margin: 0 auto;
+  }
+  header #inner .toggle_btn {
+    display: none;
+  }
+  header #inner .gnb {
+    display: block;
+    position: static;
+    box-shadow: none;
+    width: auto;
+    height: auto; /*gnb 안 글자만큼만 height auto => 위에서 속성값을 수정해줘야 함*/
+    background: none;
+    padding: 0;
+  }
+  header #inner .gnb ul {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+  }
+  header #inner .gnb ul li {
+    padding: 0;
+  }
+  header #inner .gnb ul li a {
+    display: block;
+    color: #000;
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+  header #inner .gnb ul li a:hover {
+    color: #fff;
+    background: #ddd;
+  }
+  figure {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  figure h1 {
+    width: 40%;
+    height: 100%;
+    font-size: 100px;
+    padding-left: 10%;
+  }
+  figure h1 span:nth-child(2) {
+    display: block;
+    margin: 30px 0;
+  }
+  figure .slider {
+    width: 60%;
+    height: 100vh;
+  }
+  #hobby-section .inner {
+    width: 80%;
+  }
+  #hobby-section .inner .sec-tit {
+    padding: 180px 0 60px;
+    font-size: 50px;
+  }
+  #hobby-section .inner .wrap {
+    flex-direction: row;
+    gap: 20px;
+  }
+  #hobby-section .inner .wrap .hobby {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+  }
+  #hobby-section .inner .wrap .hobby:nth-child(3) {
+    margin-right: 0;
+  }
+  #hobby-section .inner .wrap .hobby-img {
+    width: 100%;
+    height: 300px;
+  }
+  #hobby-section .inner .wrap .hobby-info {
+    width: 100%;
+    padding-left: 0;
+    padding-top: 10px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+@media screen and (min-width: 1132px) {
+  figure h1 {
+    font-size: 140px;
+  }
+}/*# sourceMappingURL=style01.css.map */
