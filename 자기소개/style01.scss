@@ -2,11 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 /*====mobile====*/
+/*common*/
 body {
   font-family: "Lato", sans-serif;
   width: 100%;
   height: 100vh;
 }
+
+/*header*/
 header {
   width: 100%;
   height: 50px;
@@ -32,9 +35,13 @@ header {
       z-index: 3;
       span {
         position: absolute;
+        right: 0;
         width: 20px;
         height: 3px;
         background: #000;
+        &:nth-child(1) {
+          top: 0%;
+        }
         &:nth-child(2) {
           top: 50%;
         }
@@ -59,10 +66,9 @@ header {
     }
     .gnb {
       display: none;
-      font-weight: bold;
-      position: absolute;
       width: 200px;
       height: 100vh;
+      position: absolute;
       top: 0;
       right: 0;
       padding: 80px 25px 0 0;
@@ -70,15 +76,12 @@ header {
       text-align: right;
       background: #111;
       z-index: 2;
+      font-weight: bold;
       li {
         padding: 30px 0;
         a {
           font-size: 20px;
           color: #fff;
-          &:hover {
-            font-weight: bold;
-            color: #ddd;
-          }
         }
       }
       &.active {
@@ -87,19 +90,20 @@ header {
     }
   }
 }
+/*figure*/
 figure {
   h1 {
     height: 350px;
-    font-size: 80px;
     padding-top: 140px;
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    font-size: 80px;
     span {
       &:nth-child(1) {
         display: block;
+        margin-bottom: 20px;
       }
       &:nth-child(2) {
         display: inline-block;
-        margin-top: 20px;
       }
     }
   }
@@ -109,8 +113,8 @@ figure {
     background: url("./img/main-img.jpg") center/cover no-repeat;
   }
 }
-
-#hobby-section {
+/*section*/
+.hobby-section {
   width: 100%;
   height: 100%;
   .inner {
@@ -122,7 +126,7 @@ figure {
       font-size: 40px;
       font-weight: bold;
     }
-    .wrap {
+    .sec-contents {
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -168,19 +172,19 @@ figure {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            margin-bottom: 5px;
             color: #fff;
             font-size: 40px;
-            margin-bottom: 5px;
             font-weight: normal;
             opacity: 0;
           }
         }
         &-info {
-          padding-left: 10px;
           display: flex;
           flex-direction: column;
-          gap: 2px;
           justify-content: end;
+          gap: 2px;
+          padding-left: 10px;
           font-size: 12px;
           font-weight: bold;
         }
@@ -188,10 +192,10 @@ figure {
     }
   }
 }
-#mbti-section {
+.mbti-section {
   width: 100%;
   height: 100%;
-  background: #eee;
+  background: #000;
   .inner {
     width: 95%;
     height: 100%;
@@ -201,25 +205,13 @@ figure {
       padding: 120px 0 60px;
       font-size: 40px;
       font-weight: bold;
+      color: #fff;
     }
     .sec-main {
       position: absolute;
       left: 0;
       bottom: 80px;
       animation: mbti 10s linear infinite;
-      h1 {
-        width: 400px;
-        height: 300px;
-        line-height: 300px;
-        font-size: 120px;
-        text-align: center;
-        margin-bottom: 150px;
-        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-        border-radius: 100%;
-      }
-      img {
-        padding-left: 150px;
-      }
       @keyframes mbti {
         0% {
           left: 0;
@@ -234,6 +226,177 @@ figure {
         100% {
           left: 90%;
           opacity: 0;
+        }
+      }
+      h1 {
+        width: 400px;
+        height: 300px;
+        line-height: 300px;
+        text-align: center;
+        margin-bottom: 150px;
+        border-radius: 100%;
+        font-size: 120px;
+        color: #fff;
+      }
+      img {
+        padding-left: 150px;
+      }
+      .heart {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: -10px;
+        left: -5px;
+        animation: heart 5s linear infinite;
+        &-01 {
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          background: red;
+          transform: rotate(45deg);
+          box-shadow: 0 0 20px #f00, 0 0 40px #f00, 0 0 60px #f00;
+          &::before,
+          &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: inherit;
+            border-radius: 50%;
+          }
+          &::before {
+            top: 0;
+            left: -50%;
+          }
+          &::after {
+            top: -50%;
+            left: 0;
+          }
+        }
+        &-02 {
+          width: 10px;
+          height: 10px;
+          background: red;
+          transform: rotate(45deg);
+          position: absolute;
+          top: 40%;
+          left: 30%;
+          box-shadow: 0 0 20px #f00, 0 0 40px #f00, 0 0 60px #f00;
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            border-radius: 50%;
+          }
+          &::before {
+            top: 0;
+            left: -50%;
+          }
+          &::after {
+            top: -50%;
+            left: 0;
+          }
+        }
+        &-03 {
+          width: 10px;
+          height: 10px;
+          background: red;
+          transform: rotate(45deg);
+          position: absolute;
+          top: 30%;
+          left: 50%;
+          box-shadow: 0 0 20px #f00, 0 0 40px #f00, 0 0 60px #f00;
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            border-radius: 50%;
+          }
+          &::before {
+            top: 0;
+            left: -50%;
+          }
+          &::after {
+            top: -50%;
+            left: 0;
+          }
+        }
+        &-04 {
+          width: 10px;
+          height: 10px;
+          background: red;
+          transform: rotate(45deg);
+          position: absolute;
+          top: 20%;
+          left: 20%;
+          box-shadow: 0 0 20px #f00, 0 0 40px #f00, 0 0 60px #f00;
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            border-radius: 50%;
+          }
+          &::before {
+            top: 0;
+            left: -50%;
+          }
+          &::after {
+            top: -50%;
+            left: 0;
+          }
+        }
+        &-05 {
+          width: 10px;
+          height: 10px;
+          background: red;
+          transform: rotate(45deg);
+          position: absolute;
+          top: 10%;
+          left: 40%;
+          box-shadow: 0 0 20px #f00, 0 0 40px #f00, 0 0 60px #f00;
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            border-radius: 50%;
+          }
+          &::before {
+            top: 0;
+            left: -50%;
+          }
+          &::after {
+            top: -50%;
+            left: 0;
+          }
+        }
+        @keyframes heart {
+          0% {
+            opacity: 0;
+            transform: scale(0.5);
+          }
+          50% {
+            opacity: 1;
+            transform: scale(0.7);
+          }
+          100% {
+            opacity: 0;
+            transform: scale(1);
+            transform: translate(-10px, -10px);
+          }
         }
       }
     }
@@ -253,7 +416,7 @@ figure {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          background: yellow;
+          background: #ffed00;
           z-index: 2;
         }
         &:nth-child(2) {
@@ -300,12 +463,13 @@ figure {
       }
       .gnb {
         display: block;
-        position: static;
-        box-shadow: none;
         width: auto;
         height: auto; /*gnb 안 글자만큼만 height auto => 위에서 속성값을 수정해줘야 함*/
+        position: static;
+        box-shadow: none;
         background: none;
         padding: 0;
+
         ul {
           display: flex;
           flex-direction: row;
@@ -316,11 +480,6 @@ figure {
               display: block;
               color: #000;
               font-size: 16px;
-              padding: 8px 20px;
-              &:hover {
-                color: #fff;
-                background: #ddd;
-              }
             }
           }
         }
@@ -348,14 +507,14 @@ figure {
       height: 100vh;
     }
   }
-  #hobby-section {
+  .hobby-section {
     .inner {
       width: 80%;
       .sec-tit {
         padding: 180px 0 60px;
         font-size: 50px;
       }
-      .wrap {
+      .sec-contents {
         flex-direction: row;
         gap: 20px;
         .hobby {

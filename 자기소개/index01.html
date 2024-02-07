@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--jQuery-->
+    <script defer src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!--scrollTo-->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.3/jquery.scrollTo.min.js"
+    ></script>
+    <!--custom-->
     <link rel="stylesheet" href="./style01.css" />
     <script defer src="./script.js"></script>
     <title>Document</title>
@@ -10,7 +18,7 @@
   <body>
     <header>
       <div id="inner">
-        <h1 class="logo"><a href="#">logo</a></h1>
+        <h1 class="logo"><a href="#">BR</a></h1>
         <div class="toggle_btn">
           <span></span>
           <span></span>
@@ -18,8 +26,8 @@
         </div>
         <nav class="gnb">
           <ul>
-            <li><a href="#">HOBBY</a></li>
-            <li><a href="#">MBTI</a></li>
+            <li><a href="#page1">HOBBY</a></li>
+            <li><a href="#page2">MBTI</a></li>
             <li><a href="#">CONTACT</a></li>
           </ul>
         </nav>
@@ -33,10 +41,10 @@
       </h1>
       <div class="slider"></div>
     </figure>
-    <section id="hobby-section">
+    <section id="page1" class="hobby-section">
       <div class="inner">
         <h2 class="sec-tit">HOBBY</h2>
-        <div class="wrap">
+        <div class="sec-contents">
           <article class="hobby travel">
             <div class="hobby-img">
               <a href="#">
@@ -76,12 +84,19 @@
         </div>
       </div>
     </section>
-    <section id="mbti-section">
+    <section id="page2" class="mbti-section">
       <div class="inner">
         <h2 class="sec-tit">MBTI</h2>
         <div class="sec-main">
           <h1>ISFP</h1>
           <img src="./img/man.png" alt="man" />
+          <div class="heart">
+            <span class="heart-01"></span>
+            <span class="heart-02"></span>
+            <span class="heart-03"></span>
+            <span class="heart-04"></span>
+            <span class="heart-05"></span>
+          </div>
         </div>
         <div class="flower">
           <span></span>
@@ -90,7 +105,6 @@
           <span></span>
           <span></span>
         </div>
-        <div class="heart"></div>
       </div>
     </section>
   </body>
