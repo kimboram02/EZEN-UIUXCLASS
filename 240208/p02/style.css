@@ -1,4 +1,5 @@
 /*font-style*/
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;600&display=swap");
@@ -42,7 +43,39 @@ body {
   height: calc(100% - 80px);
   overflow: hidden;
 }
-
+/*#### section : header ####*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.gnb-inner {
+  width: calc(100% - 40px);
+  margin: auto;
+  height: 60px;
+  line-height: 60px;
+  overflow: hidden;
+}
+.logo {
+  float: left;
+}
+.logo img {
+  padding-top: 17px;
+}
+.gnb {
+  float: right;
+}
+.menu {
+  display: none;
+}
+.slogan {
+  font-size: 16px;
+  font-style: italic;
+}
+.trigger {
+  display: none;
+}
 /*#### section : home ####*/
 .home-inner {
   background: #fff;
@@ -303,14 +336,13 @@ input[id="tab3"]:checked ~ .tabs {
 .detail {
   margin-bottom: 50px;
 }
-.detail div {
+.detail > div {
   display: inline-block;
   width: 32%;
   color: #999;
   text-align: center;
 }
-.detail > div {
-}
+
 .detail div span {
   display: block;
   color: #000;

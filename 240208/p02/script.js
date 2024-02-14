@@ -44,3 +44,29 @@ $(".project-photo").slick({
   autoplay: true,
   cssEase: "linear",
 });
+
+//header > trigger btn
+
+$(".trigger").click(function () {
+  $(this).toggleClass("active");
+  $(".gnb").toggleClass("active");
+});
+
+$(".menu a").click(function () {
+  $(".gnb").removeClass("active");
+  $(".trigger").removeClass("active");
+});
+
+//scrollTo : header > trigger btn
+$(".menu a").click(function () {
+  $.scrollTo(this.hash || 0, 900); //매칭되는 a가 없다면 0: top에 그대로 있어라
+});
+
+//header scroll event
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 50) {
+    $("header").addClass("active");
+  } else {
+    $("header").removeClass("active");
+  }
+});
