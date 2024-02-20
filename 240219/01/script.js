@@ -327,6 +327,6 @@
 // setTimeout() : 특정 시간이 경과한 이후에 작동하게 만드는 함수
 // heap / callstack / Que
 
-setTimeout(() => {
-  console.log("안녕하세요");
-}, 3000);
+// setTimeout(() => {
+//   console.log("안녕하세요");
+// }, 3000);
