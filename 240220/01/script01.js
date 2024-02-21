@@ -26,6 +26,11 @@
 // const descContext = desc.textContent; //웹브라우저에 출력된 값 외의 모든 값 찾아옴 / display : none 등이 되었을 때 innerText와 확연한 차이 발생
 // console.log(descContext);
 
+// const desc = document.querySelector("#desc"); //하나에 displat:none 적용하면 innerText 와 textContent 차이 확연히 보임
+// console.log(desc.innerText);
+// console.log(desc.innerHTML);
+// console.log(desc.textContent);
+
 // 이벤트 핸들러 = > 이벤트 작동 실행
 // const title = document.querySelector("h1");
 // // title.onclick = function () {
